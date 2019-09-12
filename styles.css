@@ -1,0 +1,23 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border-color: red;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.player-input {
+  align-items: center;
+   /* background-color: #1F1F3D; */
+   display: flex;
+   justify-content: center;
+   height: 500px;
+}
