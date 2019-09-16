@@ -1,23 +1,31 @@
 var playerOne = document.getElementById('p-1-input');
 var playerTwo = document.getElementById('p-2-input');
+// var newPlayer1 = document.querySelector();
+// var newPlayer2 = document.querySelector();
 var playGame = document.querySelector('.play-game');
 var button = document.getElementById('play-button');
-// var main = document.quertySelector('')
+var main = document.querySelector('.play-game')
 
 
-document.querySelector('.play-game').addEventListener('click', noPlayer);
-// main.addEventListener('click', );
+// document.querySelector('.play-game').addEventListener('click', noPlayer);
+main.addEventListener('click', noPlayer);
 // document.querySelector('.input-container').addEventListener('click', changeInnerHTML);
 
+//funtion for players to enter names.
+// function enterName() {
+//   playerOne.innerText = newPlayer1.value;
+//   playerTwo.innerText = newPlayer2.value;
+// };
 
-
+//create text alert for when both inout one or input 2 are empty.
 function noPlayer() {
 playGame.innerText = `MISSING PLAYER NAME!`;
-   if (playerOne.value === "" &&
+   if (playerOne.value === "" ||
  playerTwo.value === "");
  // playGame.innerText = `MISSING PLAYER NAME!`; {
  };
 
+//Create function that creates the ability to toggel between html elements.
 
 // function changeInnerHTML() {
 //   var playButton = document.createElement('player-input');
