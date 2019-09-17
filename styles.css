@@ -1,3 +1,4 @@
+/* full page */
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -6,26 +7,31 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* border-color: red; */
+}
+/* Nav Bar/ Header */
+header {
+display: flex;
+justify-content: space-between;
+height: 100px;
+background-color: #d1b97b;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
+ font-size: 3em;
+ padding-top: 22px;
+ margin-right: 33%;
+ display: flex;
+ justify-content: center;
 }
 
-.player-input {
-  align-items: center;
-   /* background-color: #1F1F3D; */
-   display: flex;
-   justify-content: center;
-   height: 500px;
+button {
+  width:8%;
+  background-image: url("nav-button.png");
+  background-position:center;
+  background-size: cover;
 }
 
-.player {
-  padding-left: auto;
-}
-
+/* Grid Container */
 .main-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -33,7 +39,6 @@ h1 {
   background-image: url("power.jpeg");
   background-position:center;
   background-size: cover;
-  /* height: 60%; */
 }
 
 .input-container {
@@ -46,60 +51,22 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-  header {
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  background-color: #d1b97b;
+
+.player-input {
+  align-items: center;
+   display: flex;
+   justify-content: center;
+   height: 500px;
 }
 
-/* .input-container {
-  display: flex;
-  justify-content: ;
-} */
-
-button {
-  width:8%;
-  background-image: url("nav-button.png");
-  background-position:center;
-  background-size: cover;
+.player {
+  padding-left: auto;
 }
-
- h1 {
-  font-size: 3em;
-  padding-top: 22px;
-  margin-right: 33%;
-}
-
-/* div {
-  width: 200px;
-  float: left;
-  margin-left: 24%;
-} */
-
-input {
-  margin-top: 400px;
-  float: left;
-  /* display: flex;
-  justify-content: flex-end; */
-  height: 33px;
-  margin-top: 0;
-  width: 129%;
-}
-
-/* p {
-  margin-top: 330px;
-  text-align: left;
-  font-weight: bolder;
-} */
 
 .player-input {
   text-align: center;
   width: auto;
   height: 100%;
-  /* background-image: url("white.jpeg");
-  background-position:center;
-  background-size: cover; */
   width: 100%;
 }
 
@@ -112,10 +79,10 @@ input {
     font-size: 1.3em;
 }
 
-/* .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer; */
+input {
+  margin-top: 400px;
+  float: left;
+  height: 33px;
+  margin-top: 0;
+  width: 129%;
+}

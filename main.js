@@ -1,3 +1,4 @@
+var innerHTML = document.getElementById('#inner-HTML');
 var playerOne = document.getElementById('p-1-input');
 var playerTwo = document.getElementById('p-2-input');
 // var newPlayer1 = document.querySelector();
@@ -5,10 +6,9 @@ var playerTwo = document.getElementById('p-2-input');
 var playGame = document.querySelector('.play-game-button');
 // var button = document.getElementById('play-button');
 // var main = document.querySelector('.play-game-button')
-var innerHTML = document.getElementById('#inner-HTML');
 var mainContainer = document.querySelector('.main-container');
-var startGameButton = <button class="start-game-button">Start Game</button>;
-var gamePageButton = <button class="start-game-button">Play Game</button>;
+// var startGameButton = <button class="start-game-button">Start Game</button>;
+// var gamePageButton = <button class="start-game-button">Play Game</button>;
 
 
 // document.querySelector('.play-button').addEventListener('click', gameStartInfo);
@@ -54,7 +54,7 @@ function gameStartInfo(event) {
     mainContainer.innerHTML = gameStartTemplate;
 };
 
-// document.querySelector('.start-game-button').addEventListener('click', gameStartInfo);
+document.querySelector('.start-game-button').addEventListener('click', gameStartInfo);
 
 function gamePage() {
   console.log('this');
