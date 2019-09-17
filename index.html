@@ -6,38 +6,31 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'>
     <title>Which Power Ranger</title>
   </head>
-  <body>
-  <header>
+<body>
+<header>
   <button id ='nav-button'></button>
   <h1>Which Power Ranger?</h1>
 </header>
 <main>
-  <section class = 'player-start container'>
+  <section class = 'player-start main-container'>
     <article class = 'box-1' id = 'box1'></article>
     <article class ='box-2' id = 'box2'>
-    <form class ='player-input'>
+    <form class ='player-input' id = 'innere-HTML'>
       <div class = 'input-container'>
       <div class = 'input-container2'>
-      <input class ='input' id = 'p-1-input' type ='text' maxlength="32">
-      <p>Player 1</p>
-      <input class ='input' id ='p-2-input' type = 'text' maxlength="32">
-      <p>Player 2</p>
+      <input id ='p-1-input' type ='text' required name='player-one-name' maxlength='32'>
+      <input id ='p-2-input' type = 'text' required name='player-two-name' maxlength='32'><br>
+      <p class ='player'>Player 1</p>
+      <p class ='player'>Player 2</p>
       </div>
-      <button class ='play-game' id = 'play-button'>PLAY GAME</button></article>
+      <button class ='play-game-button' id ='play-button'>PLAY GAME</button>
+      <!-- <button>${startGameButton}<button> -->
+      </article>
       </div>
-    <article class = 'box-3' id = 'box3'></article>
-    </form>
+    </article>
+    <article class ='box-3' id ='box3'></article>
+  </form>
   </section>
-</main>
-  <!-- <section class = 'welcome'>
-    <h2>WECLOME <span id ='player-1'>PLAYER 1 NAME</span> AND <span id ='player-2-name'>PLAYER 2 NAME!</span></h2><br>
-      <p>The goal of the game is to find all 5 pairs of cards as quickly as possible. The player that finds the greatest number of pairs, wins.<br>
-        To begin playing, the player whose name is highlighted can clickany card in the card pile. It will flip over and reveal a picture of a Power Ranger.
-        Click another card. If they match, they will disappear and you will have completed a match! If they dont, you'll have three seconds to look at them
-        before they flip back over. Then it's time for the other player to try!<br>
-        AFter you play, you'll see the name of the final winner and how long it took to win the game.</p>
-        <button class ='play-game'>PLAY GAME</button> -->
-    </section>
-  </body>
+</body>
 <script type="text/javascript" src="main.js"></script>
 </html>

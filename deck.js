@@ -1,17 +1,17 @@
 class Deck {
   constructor(obj) {
-    this.cards = 10;
-    this.matchedCards = 5;
+    this.cards = [10];
+    this.matchedCards = 2;
     this.selectedCards = 0;
     this.matches = 0;
   }
-  
-  shuffle() {
 
+  shuffle() {
+    for (for (var i = 0; i < cards.count; i++))
   }
 
   checkSelectedCards() {
-
+    for (for (var i = 0; i < selectedCards.count; i++))
   }
 
   moveToMatched() {

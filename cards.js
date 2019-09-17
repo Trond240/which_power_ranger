@@ -1,11 +1,11 @@
 class Cards {
   constructor(obj) {
-    this.matchInfo = this.matchInfo;
+    this.matchInfo = obj.matchInfo;
     this.matched = false;
   }
-  
+
   match() {
-    if (this.matchInfo = !this.matchInfo;) {
+    if (this.matchInfo = !obj.matchInfo;) {
       this.matched = true;
     }
   }
