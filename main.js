@@ -12,7 +12,7 @@ var mainContainer = document.querySelector('.main-container');
 
 
 // document.querySelector('.play-button').addEventListener('click', gameStartInfo);
-// document.querySelector('.play-game-button').addEventListener('click', noPlayer);
+document.querySelector('.play-game-button').addEventListener('click', noPlayer);
 // document.querySelector('.input-container').addEventListener('click', changeInnerHTML);
 // document.querySelector('.play-game-button').addEventListener('click', gameStartInfo);
 // document.querySelector('.start-game-button').addEventListener('click', gamePage);
