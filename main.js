@@ -12,9 +12,9 @@ var mainContainer = document.querySelector('.main-container');
 
 
 // document.querySelector('.play-button').addEventListener('click', gameStartInfo);
-document.querySelector('.play-game-button').addEventListener('click', noPlayer);
+document.getElementById('play-button').addEventListener('click', noPlayer);
 // document.querySelector('.input-container').addEventListener('click', changeInnerHTML);
-// document.querySelector('.play-game-button').addEventListener('click', gameStartInfo);
+document.querySelector('.play-game-button').addEventListener('click', gameStartInfo);
 // document.querySelector('.start-game-button').addEventListener('click', gamePage);
 
 //create text alert for when both inout one or input 2 are empty.
@@ -30,13 +30,13 @@ playGame.innerText = `MISSING PLAYER NAME!`;
 function gameStartInfo(event) {
   event.preventDefault();
   var gameStartTemplate = `
-  <article class = 'box-1' id = 'box1'></article>
+  <article class ='box-1' id = 'box1'></article>
   <article class ='box-2' id = 'box2'>
     <p class = 'welcome'>WELCOME
       <span>${playerOne.value}</span>AND
       <span>${playerTwo.value}!</span>
    </p>
-   <p>The goal of the game is to find all 5 pairs of the crads as quickly as possible.
+   <p class ="directions">The goal of the game is to find all 5 pairs of the crads as quickly as possible.
       the player that finds the greatest numbers of pairs, wins.<br>
       To begin playing, the player whose names is highlighted can click any card. It will flip
       over and reveala picture of a Power Ranger. Click another card. If they match, they will
@@ -45,7 +45,7 @@ function gameStartInfo(event) {
       <br>
       After you play, you'll see the name of the final winner and how long it took to win the game.
       <button class ='start-game-button' id ='play-button'>PLAY GAME</button>
-      </article>
+      </article></p>
   <article class ='box-3' id ='box3'></article>
   `;
 

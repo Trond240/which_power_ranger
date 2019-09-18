@@ -53,7 +53,6 @@ button {
 }
 
 .player-input {
-  align-items: center;
   display: flex;
   justify-content: center;
   height: 500px;
@@ -85,4 +84,13 @@ input {
   height: 33px;
   margin-top: 0;
   width: 129%;
+}
+
+/* Welcome page */
+.welcome {
+  display: flex;
+    font-size: 1.3em;
+    font-weight: bolder;
+    justify-content: center;
+    margin-top: 32%;
 }
