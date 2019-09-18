@@ -5,8 +5,5 @@ class Cards {
   }
 
   match() {
-    if (this.matchInfo = !obj.matchInfo;) {
-      this.matched = true;
     }
-  }
-};
+  };
