@@ -29,7 +29,7 @@ function gameStartInfo(event) {
   var gameStartTemplate = `
   <article class ='box-1' id = 'box1'></article>
   <article class ='box-2' id = 'box2'>
-    <p class ='welcome'>WELCOME<span> ${playerOne.value} </span>AND<span> ${playerTwo.value} !</span>
+    <p class ='welcome'>WELCOME <span>${playerOne.value}</span> AND <span>${playerTwo.value}!</span>
    </p>
    <p class = 'directions'>The goal of the game is to find all 5 pairs of the crads as quickly as possible.
       the player that finds the greatest numbers of pairs, wins.<br>
@@ -90,4 +90,4 @@ function gamePage() {
   mainContainer.innerHTML = gamePageTemplate;
 };
 
-startGameButton.addEventListener('click', gamePage);
+// startGameButton.addEventListener('click', gamePage);

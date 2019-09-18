@@ -13,7 +13,7 @@ header {
 display: flex;
 justify-content: space-between;
 height: 100px;
-background-color: #d1b97b;
+background-color: #d6c06f;
 }
 
 h1 {
@@ -97,6 +97,7 @@ input {
 }
 
 .directions {
-  font-size: 1.2;
-  font-weight: 500;
+  font-size: x-large;
+  font-weight: bolder;
+
 }
