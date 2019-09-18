@@ -36,7 +36,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 100% 50px 200px;
-  background-image: url("power.jpeg");
+  background-image: url("rangers.jpg");
   background-position:center;
   background-size: cover;
 }
@@ -93,7 +93,7 @@ input {
     font-weight: bolder;
     justify-content: center;
     margin-top: 30%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 .directions {
