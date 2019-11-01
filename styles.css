@@ -1,21 +1,80 @@
 /* full page */
-* {
-  font-family: 'Open Sans', sans-serif;
-}
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-/* Nav Bar/ Header */
-header {
-display: flex;
-justify-content: space-between;
-height: 100px;
-background-color: #d6c06f;
+
+/* body */
+body {
+  font-family: 'Open Sans';
 }
 
-.hiddew {
+/* Nav Bar/ Header */
+
+header {
+display: flex;
+justify-content: center;
+height: 60px;
+background-color: #d6c06f;
+width: 100%;
+}
+
+/* game start section */
+
+/* .game-start {
+  display: flex;
+} */
+
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.player1 {
+  margin-left: 25%;
+}
+
+.player2 {
+  margin-right: 25%;
+}
+
+button {
+  margin-top: 10%;
+  margin-bottom: 20%;
+  width: 50%;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  margin-left: 25%;
+}
+
+.game-directions {
+  display: flex;
+  justify-content: center;
+}
+
+input, p {
+  display: block;
+  margin-top: 20%;
+  width: 20%;
+  height: 40px;
+}
+
+.input-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  background-image: url('rangers.jpg');
+}
+
+
+.hidden {
   display: none;
 }
