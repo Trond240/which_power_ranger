@@ -7,29 +7,64 @@
     <title>Which Power Ranger</title>
   </head>
 <body>
-<header>
-  <button id ='nav-button'></button>
-  <h1>Which Power Ranger?</h1>
-</header>
-<main>
-  <section class = 'player-start main-container'>
-    <article class = 'box-1' id = 'box1'></article>
-    <article class ='box-2' id = 'box2'>
-    <form class ='player-input' id = 'innere-HTML'>
-      <div class = 'input-container'>
-      <div class = 'input-container2'>
-      <input id ='p-1-input' type ='text' required name='player-one-name' maxlength='32'>
-      <p class ='player'>Player 1</p>
-      <input id ='p-2-input' type = 'text' required name='player-two-name' maxlength='32'><br>
-      <p class ='player'>Player 2</p>
-      </div>
-      <button class ='play-game-button' id ='play-button'>PLAY GAME</button>
-    </article>
-    </div>
-    </article>
-    <article class ='box-3' id ='box3'></article>
-    </form>
-  </section>
-</body>
-<script type="text/javascript" src="main.js"></script>
-</html>
+  <main class= 'main-container'>
+    <header>
+      <button class='nav-button'></button>
+      <h1>Which Power Ranger?</h1>
+    </header>
+      <section class ='game-start'>
+        <div class 'empty'>
+        </div>
+        <form class='playerInput'>
+          <input class='player1' type='text' max='32'>
+          <p>Player1</p>
+          <input class 'player2' type='text' max='32'>
+          <p>Player1</p>
+          <button class ='game-directions'>PLAY GAME</button>
+        </form>
+        <div class 'empty'>
+        </div>
+      </section>
+      <section class ='game-rules hidden'>
+        <div class 'empty'>
+        </div>
+        <h2 class ='welcome'>WELCOME PLAYER1 NAME AND PLAYER 2 NAME!</h1>
+          <p>The goal of the gmae is to find all 5 stars of cards as quickly as possible.
+            The player that finds the greatest numbers of pairs, wins.</p>
+          <p>To begin playing, the player whose name is highlighted can click any card
+            in the card pile. It will flip over and reveal a picture of a Power Ranger.
+            click another card. If they match, they will disapear and you will have com-
+            pleted a match! If they don't, you'll have three seconds to look at them before
+            thry flip back over. Then it's time for the other player to try!</p>
+          <p>After you play, you'll see the name of the final winner and how and how long it
+            took to win the game.</p>
+            <button class ='game-directions'>PLAY GAME</button>
+        <div class 'empty'>
+        </div>
+      </section>
+      <section class ='game-page hidden'>
+        <div class 'empty'>
+        </div>
+        <div class="card-container">
+        </div>
+        <div class 'empty'>
+        </div>
+      </section>
+      <section class ='game-over hidden'>
+        <div class 'empty'>
+        </div>
+        <h2>CONGRATUALATIONs, PLAYER 1 WINS!</h2>
+        <p>it took you 342.45 seconds.</p>
+        <p>Click below to keep playing</p>
+        <div class ='new-rematch'>
+          <button class='new-game'>NEW GAME</button>
+          <button class='rematch'>REMATCH</button>
+        </div>
+        <div class 'empty'>
+        </div>
+      </section>
+    </main>
+    <script type='text/javascript' src='cards.js'></script>
+    <script type='text/javascript' src='deck.js'></script>
+    <script type='text/javascript' src='main.js'></script>
+  </body>
