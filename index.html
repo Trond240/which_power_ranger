@@ -10,25 +10,19 @@
   <main class= 'main-container'>
     <header>
       <button class='nav-button'></button>
-      <h1>Which Power Ranger?</h1>
+      <h1 class='title'>Which Power Ranger?</h1>
     </header>
       <section class ='game-start'>
-        <div class 'empty'>
-        </div>
         <form class='playerInput'>
-          <input class='player1' type='text' max='32'>
-          <p>Player1</p>
-          <input class 'player2' type='text' max='32'>
-          <p>Player1</p>
-          <button class ='game-directions'>PLAY GAME</button>
+          <div class='input-div'>
+            <input class='player1' type='text' max='32' placeholder="PLAYER 1">
+            <input class='player2' type='text' max='32' placeholder="PLAYER 2">
+          </div>
+          <button class='game-directions main-button'>PLAY GAME</button>
         </form>
-        <div class 'empty'>
-        </div>
       </section>
       <section class ='game-rules hidden'>
-        <div class 'empty'>
-        </div>
-        <h2 class ='welcome'>WELCOME PLAYER1 NAME AND PLAYER 2 NAME!</h1>
+        <h2 class ='welcome'>WELCOME AND PLAYER 2 NAME!</h1>
           <p>The goal of the gmae is to find all 5 stars of cards as quickly as possible.
             The player that finds the greatest numbers of pairs, wins.</p>
           <p>To begin playing, the player whose name is highlighted can click any card
@@ -38,9 +32,7 @@
             thry flip back over. Then it's time for the other player to try!</p>
           <p>After you play, you'll see the name of the final winner and how and how long it
             took to win the game.</p>
-            <button class ='game-directions'>PLAY GAME</button>
-        <div class 'empty'>
-        </div>
+            <button class ='play-game main-button'>PLAY GAME</button>
       </section>
       <section class ='game-page hidden'>
         <div class 'empty'>
