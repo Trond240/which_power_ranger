@@ -14,12 +14,12 @@ directionsButton.addEventListener('click', gameStartInfo);
 
 // formSection.addEventListener('click', noPlayer);
 
-// function mainHandler(event) {
-//   if(event.target.classList.contains('.main-button')) {
-//     gameStartInfo(event);
-//     missingInput();
-//   }
-// }
+function mainHandler(event) {
+  if(event.target.classList.contains('.main-button')) {
+    gameStartInfo(event);
+    missingInput();
+  }
+}
 
 
 function missingInput() {
@@ -33,8 +33,8 @@ function gameStartInfo() {
 
   var rulesTemplate = `
   <section class ='game-rules'>
-    <h2 class ='welcome'>WELCOME ${playerOne.value}AND ${playerTwo.value}!</h1>
-      <p>The goal of the gmae is to find all 5 stars of cards as quickly as possible.
+    <h2 class='welcome'>WELCOME ${playerOne.value}AND ${playerTwo.value}!</h1>
+      <p class='welcome-p'>The goal of the gmae is to find all 5 stars of cards as quickly as possible.
         The player that finds the greatest numbers of pairs, wins.
         To begin playing, the player whose name is highlighted can click any card
         in the card pile. It will flip over and reveal a picture of a Power Ranger.
