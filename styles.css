@@ -79,17 +79,145 @@ input {
   justify-content: space-between;
 }
 
-section {
+.game-start, .game-rules, .game-over  {
   background-image: url('rangers.jpg');
 }
 
-
-.hidden {
-  display: none;
-}
 
 /* Direction Page */
 
 .game-rules {
   display: block;
+}
+
+.welcome-p {
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+.welcome, .welcome-p {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  color: white;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Game Page */
+.game-page {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.box1, .box3 {
+  color: #d6c06f;
+  background-color: black;
+}
+
+.number-of-matches {
+  border-top: solid 1px #d6c06f;
+  border-bottom: solid 1px #d6c06f;
+  border-width: 90%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+h3, .wins {
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+/* img {
+  height: 150px;
+  width: 100px;
+} */
+
+.card-one-front {
+  background-image: url('red.jpeg');
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+.card-two-front {
+  background-image: url('blue.jpeg');
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+.card-three-front {
+  background-image: url('yellow.jpeg');
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+.card-back {
+  background-image: url('rangers-logo.jpeg');
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100px;
+}
+
+
+/* .row-one-container {
+	perspective: 1000px;
+} */
+	/* flip the pane when hovered */
+	.row-one-container:hover .flipper, .row-two-container:hover .flipper, .row-one-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+
+.row-one-container, .row-one-container, .front, .back {
+	width: 150px;
+	height: 100px;
+}
+
+.row-one-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.game-over {
+padding-top: 15%;
+color: white;
+font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
