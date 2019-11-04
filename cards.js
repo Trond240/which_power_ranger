@@ -1,7 +1,7 @@
-class Cards {
+class Card {
   constructor(card) {
-    this.carddId = Number(card.cardId)
-    this.matched = card.matched;
+    this.cardId = Number(card.cardId)
+    this.matchedInfo = card.matchedInfo;
     this.selected = false;
   }
 }

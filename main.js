@@ -10,13 +10,18 @@ var gameContainer = document.querySelector('.game-start');
 var ruleContainer = document.querySelector('.game-rules');
 var welcomePlayers = document.querySelector('.welcome-div');
 var gamePageName = document.querySelector('.p-1-game');
-var gameBoardCards =documnt.querySelcteor('.card');
+var gameBoardCards =document.querySelector('.card-back');
+var cards = null;
+var deck = null;
+
 
 input.addEventListener('keyup', missingInput);
 directionsButton.addEventListener('click', insertPlayerNames);
 directionsButton.addEventListener('click', removeGameStart);
 gamePageButton.addEventListener('click', removeGameRules);
-directionsButton.addEventListener('click', insertPlayerNames);
+gamePageButton.addEventListener('click', instantiateDeckArray);
+gamePageButton.addEventListener('click', instantiateCardArray);
+gameBoardCards.addEventListener('Click', flipCard);
 
 
 
@@ -36,7 +41,7 @@ function missingInput() {
 function removeGameStart() {
   document.querySelector('.game-start').classList.add('hidden');
   document.querySelector('.game-rules').classList.remove('hidden');
-}
+};
 
 
 function insertPlayerNames() {
@@ -47,14 +52,24 @@ function insertPlayerNames() {
 function removeGameRules() {
   document.querySelector('.game-rules').classList.add('hidden');
   document.querySelector('.game-page').classList.remove('hidden');
-}
-
-function insertGamePageNames() {
-  gamePageName.insertAdjacentHTML('afterbegin',
-`<h2 class= ${playerOne.value.toUpperCase()}</h2>`);
-}
+};
 
 function flipCard() {
-  document.querySelcteor('.card-back').classList.add('hidden');
-  document.querySelcteor('.card').classList.remove('hidden');  
+  document.querySelector('.back-cards').classList.add('hidden');
+  document.querySelector('.card').classList.remove('hidden');
+};
+
+function instantiateDeckArray() {
+  var cardDeck = [];
+  deck = new Deck(cardDeck);
 }
+
+function instantiateCardArray() {
+  console.log('this');
+    var boardCards = document.querySelectorAll('.card');
+    console.log(deck);
+    for (var i = 0; i < boardCards.length; i++) {
+    var cards = new Card({cardId: boardCards[i].dataset.id, matchedInfo: "card" + [i]});
+  deck.cards.push(cards);
+  }
+};

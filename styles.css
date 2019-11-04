@@ -124,6 +124,8 @@ aside {
   justify-content: space-around;
   padding-left: 10%;
   padding-top: 5%;
+  background-image: url('rangers.jpg');
+  object-fit: cover;
   /* display: grid;
   grid-template-columns: 1fr 1fr 1fr */
 }
