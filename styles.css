@@ -14,21 +14,23 @@ body {
 /* Nav Bar/ Header */
 .nav-button {
   background-image: url('nav-button.png');
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   display: flex;
 }
 
 header {
 display: flex;
 justify-content: space-between;
-height: 60px;
+height: 100px;
 background-color: #d6c06f;
 width: 100%;
 }
 
 .title {
- margin-right: 40%;
+ margin-right: 33%;
+ padding-top: 1%;
+ font-size: 3em;
 }
 
 /* game start section */
@@ -103,9 +105,6 @@ input {
   font-weight: bold;
 }
 
-.hidden {
-  display: none;
-}
 
 /* Game Page */
 .game-page {
@@ -131,6 +130,10 @@ h3, .wins {
   padding-bottom: 15%;
 }
 
+.rounds-time {
+  padding-bottom: 50%;
+}
+
 /* img {
   height: 150px;
   width: 100px;
@@ -139,29 +142,29 @@ h3, .wins {
 .card-one-front {
   background-image: url('red.jpeg');
   background-repeat: no-repeat;
-  height: 150px;
-  width: 100px;
+  height: 200px;
+  width: 150px;
 }
 
 .card-two-front {
   background-image: url('blue.jpeg');
   background-repeat: no-repeat;
-  height: 150px;
-  width: 100px;
+  height: 225px;
+  width: 175px;
 }
 
 .card-three-front {
   background-image: url('yellow.jpeg');
   background-repeat: no-repeat;
-  height: 150px;
-  width: 100px;
+  height: 225px;
+  width: 175px;
 }
 
 .card-back {
   background-image: url('rangers-logo.jpeg');
   background-repeat: no-repeat;
-  height: 150px;
-  width: 100px;
+  height: 225px;
+  width: 175px;
 }
 
 

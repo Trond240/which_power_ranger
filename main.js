@@ -9,21 +9,20 @@ var gameContainer = document.querySelector('.game-start');
 var ruleContainer = document.querySelector('.game-rules');
 
 
-directionsButton.addEventListener('keyup', missingInput);
+// directionsButton.addEventListener('click', mainHandler);
 directionsButton.addEventListener('click', removeGameStart);
 gamePageButton.addEventListener('click', removeGameRules);
 
-// function mainHandler(event) {
-//   if(event.target.classList.contains('.main-button')) {
-//     console.log(event.target);
+// function mainHandler() {
 //     missingInput();
-//     gameStartInfo();
-//   }
+//     removeGameStart();
+//
+//     removeGameRules()
 // }
 
 function missingInput() {
- playerOne.innerText = '';
- playerTwo.innerText = '';
+ playerOne.value = '';
+ playerTwo.value = '';
  directionsButton.innerHTML = 'MISSING PLAYER NAME';
  directionsButton.disabled = true;
 }

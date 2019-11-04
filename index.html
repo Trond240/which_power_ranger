@@ -15,8 +15,8 @@
       <section class ='game-start'>
         <form class='playerInput'>
           <div class='input-div'>
-            <input class='player1 player_input' type='submit' max='32' placeholder="PLAYER 1" required>
-            <input class='player2 player_input' type='submit' max='32' placeholder="PLAYER 2" required>
+            <input class='player1 player_input' type='text' max='32' placeholder="PLAYER 1">
+            <input class='player2 player_input' type='text' max='32' placeholder="PLAYER 2">
           </div>
           <div class="js_rules">
            </div>
@@ -47,8 +47,10 @@
                <h1>5</h1>
            </div>
            <div class='wins'>GAME WINS</div>
-           <p>ROUND 1</p>
-           <p>125.75 SECONDS</p>
+           <div class='rounds-time'>
+             <p>ROUND 1</p>
+             <p>125.75 SECONDS</p>
+          </div>
         </aside>
         <article class='box2'>
           <div class='row-one-container' ontouchstart='this.classList.toggle('hover')'>
@@ -81,8 +83,10 @@
                <h1>5</h1>
            </div>
            <div class='wins'>GAME WINS</div>
-           <p>ROUND 1</p>
-           <p>125.75 SECONDS</p>
+           <div class='rounds-time'>
+             <p>ROUND 1</p>
+             <p>125.75 SECONDS</p>
+          </div>
         </aside>
       </section>
       <section class ='game-over hidden'>
