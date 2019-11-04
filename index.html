@@ -15,32 +15,36 @@
       <section class ='game-start'>
         <form class='playerInput'>
           <div class='input-div'>
-            <input class='player1 player_input' type='text' max='32' placeholder="PLAYER 1">
-            <input class='player2 player_input' type='text' max='32' placeholder="PLAYER 2">
+            <input class='player-One' type='text' max='32' placeholder="PLAYER 1">
+            <input class='player-Two' type='text' max='32' placeholder="PLAYER 2">
           </div>
           <div class="js_rules">
            </div>
-          <button class='game-directions main-button' type='button'>PLAY GAME</button>
+          <button class='game-directions main-button' type='button' disabled>PLAY GAME</button>
           <div class='input_error_message'>
           </div>
         </form>
       </section>
       <section class='game-rules hidden'>
-        <h2 class='welcome'>WELCOME ${playerOne}AND ${playerTwo}!</h1>
+        <div class='welcome-div'>
+        </div>
           <p class='welcome-p'>The goal of the gmae is to find all 5 stars of cards as quickly as possible.
-            The player that finds the greatest numbers of pairs, wins.
+            The player that finds the greatest numbers of pairs, wins.<br><br>
+
             To begin playing, the player whose name is highlighted can click any card
             in the card pile. It will flip over and reveal a picture of a Power Ranger.
             click another card. If they match, they will disapear and you will have com-
             pleted a match! If they don't, you'll have three seconds to look at them before
-            thry flip back over. Then it's time for the other player to try!
+            thry flip back over. Then it's time for the other player to try!<br><br>
+
             After you play, you'll see the name of the final winner and how and how long it
             took to win the game.</p>
             <button class ='play-game main-button'>PLAY GAME</button>
       </section>
       <section class='game-page hidden'>
         <aside class='box1 player-one-stats'>
-          <h3>PLAYER 1 NAME</h3>
+           <div class='p-1-game'>
+           </div>
            <h3>#top 4 player</h3>
            <div class='number-of-matches'>
                <h3>MATCHES THIS ROUND</h3>
@@ -53,57 +57,83 @@
           </div>
         </aside>
         <article class='box2'>
-          <div class='row-one-container' ontouchstart='this.classList.toggle('hover')'>
-            <div class='flipper'>
-          		<div class='front'>
-                <!-- <img src='rangers-logo.jpeg' alt='logo'> -->
-                <button class='card-back'></button>
-                <!-- <button class='card-back'></button>
-                <button class='card-back'></button> -->
-              </div>
-          		<div class='back'>
-          			<!-- <img src='red.jpeg' alt='red-ranger'> -->
-                <button class='card-one-front'></button>
-                <!-- <button class='card-two-front'></button>
-                <button class='card-three-front'></button> -->
-          		</div>
+          <div class ='row1'>
+            <div class=' card card-1' data-id='1'>
+              <button class='card-back'></button>
+              <button class='card-one-front hidden'></button>
             </div>
-          <div class='row-two'>
-            content
+            <div class='card card-2' data-id='2'>
+                <button class='card-back'></button>
+                <button class='card-two-front hidden'></button>
+            </div>
+            <div class='card card-3' data-id='3'>
+                <button class='card-back'></button>
+                <button class='card-three-front hidden'></button>
+            </div>
           </div>
-          <div class='row-three'>
-            content
+          <div class='row-2'>
+            <div class='card card-4' data-id='4'>
+              <button class='card-back'></button>
+              <button class='card-four-front hidden'></button>
+            </div>
+            <div class='card card-5' data-id='5'>
+                <button class='card-back'></button>
+                <button class='card-five-front hidden'></button>
+            </div>
+            <div class='card card-6' data-id='6'>
+                <button class='card-back'></button>
+                <button class='card-six-front hidden'></button>
+            </div>
+            <div class='card card-7' data-id='7'>
+                <button class='card-back'></button>
+                <button class='card-seven-front hidden'></button>
+            </div>
           </div>
-        </article>
-        <aside class='box3 player-two-stats'>
-          <h3>PLAYER 2 NAME</h3>
-           <h3>#top 4 player</h3>
-           <div class='number-of-matches'>
-               <h3>MATCHES THIS ROUND</h3>
-               <h1>5</h1>
-           </div>
-           <div class='wins'>GAME WINS</div>
-           <div class='rounds-time'>
-             <p>ROUND 1</p>
-             <p>125.75 SECONDS</p>
+        <div class='row-3'>
+          <div class='card card-8' data-id='8'>
+            <button class='card-back'></button>
+            <button class='card-one-eight hidden'></button>
           </div>
-        </aside>
-      </section>
-      <section class ='game-over hidden'>
-        <div class 'empty'>
+          <div class='card card-9' data-id='9'>
+              <button class='card-back'></button>
+              <button class='card-nine-front hidden'></button>
+          </div>
+          <div class='card card-10' data-id='10'>
+              <button class='card-back'></button>
+              <button class='card-10-front hidden'></button>
+          </div>
         </div>
-        <h2>CONGRATUALATIONs, PLAYER 1 WINS!</h2>
-        <p>it took you 342.45 seconds.</p>
-        <p>Click below to keep playing</p>
-        <div class ='new-rematch'>
-          <button class='new-game'>NEW GAME</button>
-          <button class='rematch'>REMATCH</button>
-        </div>
-        <div class 'empty'>
-        </div>
-      </section>
-    </main>
-    <script type='text/javascript' src='cards.js'></script>
-    <script type='text/javascript' src='deck.js'></script>
-    <script type='text/javascript' src='main.js'></script>
-  </body>
+          </article>
+          <aside class='box3 player-two-stats'>
+            <div class='game-page-name'></div>
+            <h3>PLAYER 2 NAME</h3>
+             <h3>#top 4 player</h3>
+             <div class='number-of-matches'>
+                 <h3>MATCHES THIS ROUND</h3>
+                 <h1>5</h1>
+             </div>
+             <div class='wins'>GAME WINS</div>
+             <div class='rounds-time'>
+               <p>ROUND 1</p>
+               <p>125.75 SECONDS</p>
+            </div>
+          </aside>
+        </section>
+        <section class ='game-over hidden'>
+          <div class 'empty'>
+          </div>
+          <h2>CONGRATUALATIONs, PLAYER 1 WINS!</h2>
+          <p>it took you 342.45 seconds.</p>
+          <p>Click below to keep playing</p>
+          <div class ='new-rematch'>
+            <button class='new-game'>NEW GAME</button>
+            <button class='rematch'>REMATCH</button>
+          </div>
+          <div class 'empty'>
+          </div>
+        </section>
+      </main>
+      <script type='text/javascript' src='cards.js'></script>
+      <script type='text/javascript' src='deck.js'></script>
+      <script type='text/javascript' src='main.js'></script>
+    </body>
