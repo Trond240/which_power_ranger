@@ -5,4 +5,17 @@ class Deck {
   this.matched = 0;
   this.seclectedCards = [];
   }
+
+  shuffle() {
+
+  }
+
+  checkSlectedCards() {
+
+  }
+
+  moveToMatched() {
+
+    
+  }
 }
