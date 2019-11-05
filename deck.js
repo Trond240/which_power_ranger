@@ -7,15 +7,13 @@ class Deck {
   }
 
   shuffle() {
-
-  }
-
-  checkSlectedCards() {
+    // for (var i 0; i < this.cards.length; i++) {
+    //
+    // }
 
   }
 
   moveToMatched() {
 
-    
   }
 }

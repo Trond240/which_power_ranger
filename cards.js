@@ -1,11 +1,12 @@
 class Card {
-  constructor(card) {
-    this.cardId = Number(card.cardId)
-    this.matchedInfo = card.matchedInfo;
+  constructor(image, matchedInfo) {
+    // this.cardId = Number(card.cardId)
+    this.image = image;
+    this.matchedInfo = matchedInfo;
     this.matched = false;
   }
 
   matched() {
-
+    
   }
 }
