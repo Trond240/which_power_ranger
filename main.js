@@ -80,10 +80,17 @@ function removeGameRules() {
 function flipCard() {
   // this.classList.toggle('flip');
   this.classList.add('flip');
-  // deck.cards.push()
   if (!flippedCard) {
      flippedCard = true;
      firstCard = this;
+     console.log(firstCard.id);
+     for(var i = 0; i < deck.cards.length; i ++) {
+       if (firstCard.id === deck.cards[i].matchedInfo) {
+         console.log(deck.cards[i]);
+         return deck.cards[i];
+
+       }
+     }
      return;
 
     }
@@ -95,7 +102,7 @@ function flipCard() {
   }
 
   function checkForMatch() {
-    if (firstCard === secondCard) {
+    if (firstCard.id === secondCard.id) {
       disableCards();
       return;
     }
