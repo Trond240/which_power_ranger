@@ -86,6 +86,7 @@ input {
 
 .game-start, .game-rules, .game-over  {
   background-image: url('power.jpeg');
+  background-position: center;
   object-fit: cover;
   /* opacity: 0.6;
   filter: alpha(opacity=100); */
@@ -131,8 +132,9 @@ aside {
   justify-content: space-around;
   padding-top: 2%;
   background-image: url('power.jpeg');
+  background-position: center;
   object-fit: cover;
-  position: relative;
+  /* position: relative; */
 }
 
 .row1, .row3 {
@@ -173,14 +175,12 @@ h3, .wins {
   padding-bottom: 50%;
 }
 
-.card.is-flipped {
+/* .card.is-flipped {
   transform: rotateY(180deg);
-}
+} */
 
 
 .front, .back{
-  /* background-image: url('rangers-logo.jpeg');
-  background-repeat: no-repeat; */
   margin-top: 10px;
   height: 180px;
   width: 120px;
@@ -188,19 +188,40 @@ h3, .wins {
   border: solid 2px ;
   border-radius: 8px;
   border: solid 3px #d6c06f;
-  /* position: relative; */
+  position: absolute;
 }
 
-.back {
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  /* position: relative; */
+  transform-style: preserve-3d;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+ .card:active {
+   transform: scale(0.97);
+   transition: transform .2s;
+ }
+
+ .card.flip {
+  transform: rotateY(180deg);
+}
+
+/* .back {
   transform: rotateY( 180deg );
   transition: transform 1s;
   transform-style: preserve-3d;
-}
+} */
 
 
-.card.is-flipped {
+/* .card.is-flipped {
   transform: rotateY(180deg);
-}
+} */
 
 .card-1,
 .card-3,

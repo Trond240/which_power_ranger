@@ -10,17 +10,21 @@ var gameContainer = document.querySelector('.game-start');
 var ruleContainer = document.querySelector('.game-rules');
 var welcomePlayers = document.querySelector('.welcome-div');
 var gamePageName = document.querySelector('.p-1-game');
+var gamePage = document.querySelector('.game-page');
 var cards = null;
 var deck = null;
-var  gameCards = document.querySelector('.card');
-gameCards.addEventListener( 'click', function() {
-  gameCards.classList.toggle('is-flipped');
-});
+// var  gameCards = document.querySelector('.card');
+// gameCards.addEventListener( 'click', function() {
+//   gameCards.classList.toggle('is-flipped');
+// });
+var gameCards = document.querySelectorAll('.card');
 
 input.addEventListener('click', missingInput);
 mainContainer.addEventListener('click', handlerOne);
 mainContainer.addEventListener('click', handlerTwo);
-gameCards.addEventListener('click', flipCard);
+gamePage.addEventListener('click', gameHandler);
+gameCards.forEach(card => card.addEventListener('click', flipCard));
+// gameCards.addEventListener('click', flipCard);
 
 
 
@@ -38,6 +42,13 @@ function handlerTwo(event) {
     instantiateDeckArray();
     instantiateCardArray();
     insertNames();
+  }
+}
+
+function gameHandler(event) {
+  if(event.target.classList.contains('card')) {
+    console.log(event.target);
+    flipCard();
   }
 }
 
@@ -70,8 +81,9 @@ function removeGameRules() {
 };
 
 function flipCard() {
-  document.querySelector('.back').classList.toggle('hidden');
-  document.querySelector('.front').classList.toggle('hidden');
+  this.classList.toggle('flip');
+  // document.querySelector('.back').classList.toggle('hidden');
+  // document.querySelector('.front').classList.toggle('hidden');
 };
 
 function instantiateDeckArray() {
