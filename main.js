@@ -11,6 +11,7 @@ var ruleContainer = document.querySelector('.game-rules');
 var welcomePlayers = document.querySelector('.welcome-div');
 var gamePageName = document.querySelector('.p-1-game');
 var gamePage = document.querySelector('.game-page');
+var gameBoard = document.querySelector('.box2');
 var cards = null;
 var deck = null;
 var flippedCard = false;
@@ -38,6 +39,7 @@ function handlerTwo(event) {
     instantiateDeckArray();
     instantiateCardArray();
     insertNames();
+    dealCards();
   }
 }
 
@@ -78,48 +80,42 @@ function removeGameRules() {
 
 
 function flipCard() {
-  // this.classList.toggle('flip');
   this.classList.add('flip');
   if (!flippedCard) {
      flippedCard = true;
      firstCard = this;
-     console.log(firstCard.id);
-     for(var i = 0; i < deck.cards.length; i ++) {
-       if (firstCard.id === deck.cards[i].matchedInfo) {
-         console.log(deck.cards[i]);
-         return deck.cards[i];
-
-       }
-     }
+     deck.cards[firstCard.id - 1].changeHasFlipped();
+     // deck.selectedCards.push(deck.cards[firstCard.id - 1]);
      return;
+   } else {
+     flippedCard = false;
+     secondCard = this;
+     deck.cards[secondCard.id - 1].changeHasFlipped();
+     // deck.selectedCards.push(deck.cards[secondCard.id - 1]);
+   }
+   // deck.checkSelectedCards();
+   unflipCards();
+};
 
-    }
+    // secondCard = this;
+    // flippedCard = false;
 
-    secondCard = this;
-    flippedCard = false;
+  //   checkForMatch();
+  // }
+  //   unflipCards();
+  // }
 
-    checkForMatch();
-  }
-
-  function checkForMatch() {
-    if (firstCard.id === secondCard.id) {
-      disableCards();
-      return;
-    }
-
-    unflipCards();
-  }
-
-  function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-  }
-
+  // function disableCards() {
+  //   firstCard.removeEventListener('click', flipCard);
+  //   secondCard.removeEventListener('click', flipCard);
+  // }
   function unflipCards() {
     setTimeout(() => {
       firstCard.classList.remove('flip');
       secondCard.classList.remove('flip');
     }, 1500);
+    deck.cards[firstCard.id - 1].changeHasFlipped();
+    deck.cards[secondCard.id -1].changeFlipped();
   }
 
 function instantiateDeckArray() {
@@ -133,7 +129,21 @@ function instantiateCardArray() {
 
     console.log(deck);
     for (var i = 0; i < cardMatches.length; i++) {
-    var cards = new Card(cardMatches[i], "card" + [i]);
+    var cards = new Card(i + 1, cardMatches[i], cardMatches[i]);
   deck.cards.push(cards);
   }
 };
+
+function dealCards() {
+
+  for(var i = 0; i < deck.cards.length; i++) {
+    gameBoard.insertAdjacentHTML ('afterbegin',
+        `<div class='card card-${i + 1}' id=${i + 1}>
+          <img class='front'src="${deck.cards[i].image}" alt="red" data-id="${i}">
+          <img class='back' src="rangers-logo.jpeg" alt="memory card">
+        </div>
+        `)
+        }
+        var gameCards = document.querySelectorAll('.card');
+        gameCards.forEach(card => card.addEventListener('click', flipCard));
+      };

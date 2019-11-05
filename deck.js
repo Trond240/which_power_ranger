@@ -4,16 +4,28 @@ class Deck {
   this.matchedCards = [];
   this.matched = 0;
   this.seclectedCards = [];
+  this.selected = false;
   }
 
+  checkMatch() {
+    // if selected 0 and selected 1 id's will equa to each other;
+    // push 0 and 1 into matched cards array
+    // incroment matches
+    // return selected cards into empoty array
+  }
+
+  moveToMatched() {
+    this.matched ++;
+  }
+
+
+
   shuffle() {
-    // for (var i 0; i < this.cards.length; i++) {
-    //
-    // }
+
 
   }
 
   moveToMatched() {
-
+    this.matched ++;
   }
 }
