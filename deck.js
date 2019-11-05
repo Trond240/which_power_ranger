@@ -7,15 +7,19 @@ class Deck {
   }
 
   shuffle() {
+    // for (var i 0; i < this.cards.length; i++) {
+    //
+    // }
 
-  }
-
-  checkSlectedCards() {
-
-  }
-
-  moveToMatched() {
-
-    
   }
 }
+
+//   checkSlectedCards() {
+//   // this.selectedCards += 10;
+//   // }
+//
+//   moveToMatched() {
+//
+//
+//   }
+// }

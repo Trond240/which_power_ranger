@@ -13,6 +13,8 @@ var gamePageName = document.querySelector('.p-1-game');
 var gamePage = document.querySelector('.game-page');
 var cards = null;
 var deck = null;
+var hasFlippedCard = false;
+var firstCard, secondCard;
 // var  gameCards = document.querySelector('.card');
 // gameCards.addEventListener( 'click', function() {
 //   gameCards.classList.toggle('is-flipped');
@@ -22,7 +24,7 @@ var gameCards = document.querySelectorAll('.card');
 input.addEventListener('click', missingInput);
 mainContainer.addEventListener('click', handlerOne);
 mainContainer.addEventListener('click', handlerTwo);
-gamePage.addEventListener('click', gameHandler);
+// gamePage.addEventListener('click', flipTwoOnly);
 gameCards.forEach(card => card.addEventListener('click', flipCard));
 // gameCards.addEventListener('click', flipCard);
 
@@ -80,11 +82,42 @@ function removeGameRules() {
   document.querySelector('.game-page').classList.remove('hidden');
 };
 
+
 function flipCard() {
-  this.classList.toggle('flip');
-  // document.querySelector('.back').classList.toggle('hidden');
-  // document.querySelector('.front').classList.toggle('hidden');
-};
+  // this.classList.toggle('flip');
+  this.classList.add('flip');
+  if (!hasFlippedCard) {
+     hasFlippedCard = true;
+     firstCard = this;
+     return;
+    }
+
+    secondCard = this;
+    hasFlippedCard = false;
+
+    checkForMatch();
+  }
+
+  function checkForMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+      disableCards();
+      return;
+    }
+
+    unflipCards();
+  }
+
+  function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+  }
+
+  function unflipCards() {
+    setTimeout(() => {
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+    }, 1500);
+  }
 
 function instantiateDeckArray() {
   var cardDeck = [];
