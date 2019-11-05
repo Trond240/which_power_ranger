@@ -191,11 +191,22 @@ h3, .wins {
   position: absolute;
 }
 
+.front {
+  transform: rotate(180deg);
+}
+
+.back {
+  backface-visibility: hidden;
+}
+
+
+
+
 .card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  /* width: calc(25% - 10px);
+  height: calc(33.333% - 10px); */
   margin: 5px;
-  /* position: relative; */
+  position: relative;
   transform-style: preserve-3d;
   box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
   transform: scale(1);
@@ -205,7 +216,7 @@ h3, .wins {
 
  .card:active {
    transform: scale(0.97);
-   transition: transform .2s;
+   transition: transform .3s;
  }
 
  .card.flip {
