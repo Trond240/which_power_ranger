@@ -151,6 +151,9 @@ aside {
 .box1, .box3 {
   color: #d6c06f;
   background-color: black;
+  border: solid 20px #d6c06f;
+  /* border-right: solid 20px #d6c06f;
+  border-bottom: solid 20px #d6c06f; */
 }
 
 .number-of-matches {
@@ -195,9 +198,26 @@ h3, .wins {
 }
 
 
-/* .card.is-flipped {
+.card.is-flipped {
   transform: rotateY(180deg);
-} */
+}
+
+.card-1,
+.card-3,
+.card-5,
+.card-7,
+.card-9 {
+  transform: rotate(45deg)
+}
+
+.card-2,
+.card-4,
+.card-6,
+.card-8,
+.card-10 {
+  transform: rotate(90deg)
+}
+
 
 
 

@@ -17,7 +17,7 @@ gameCards.addEventListener( 'click', function() {
   gameCards.classList.toggle('is-flipped');
 });
 
-input.addEventListener('keyup', missingInput);
+input.addEventListener('click', missingInput);
 mainContainer.addEventListener('click', handlerOne);
 mainContainer.addEventListener('click', handlerTwo);
 gameCards.addEventListener('click', flipCard);
@@ -37,6 +37,7 @@ function handlerTwo(event) {
     removeGameRules();
     instantiateDeckArray();
     instantiateCardArray();
+    insertNames();
   }
 }
 
@@ -68,7 +69,7 @@ function removeGameRules() {
   document.querySelector('.game-page').classList.remove('hidden');
 };
 
-function flipCard(event) {
+function flipCard() {
   document.querySelector('.back').classList.toggle('hidden');
   document.querySelector('.front').classList.toggle('hidden');
 };
