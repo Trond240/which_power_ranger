@@ -5,7 +5,7 @@ var directionsButton = document.querySelector('.game-directions');
 var gamePageButton = document.querySelector('.play-game');
 var mainButton = document.querySelector('.main-button');
 var formSection = document.querySelector('.playerInput');
-var mainContainer = document.querySelector('.main-contianer');
+var mainContainer = document.querySelector('.main-container');
 var gameContainer = document.querySelector('.game-start');
 var ruleContainer = document.querySelector('.game-rules');
 var welcomePlayers = document.querySelector('.welcome-div');
@@ -18,20 +18,27 @@ gameCards.addEventListener( 'click', function() {
 });
 
 input.addEventListener('keyup', missingInput);
-directionsButton.addEventListener('click', insertPlayerNames);
-directionsButton.addEventListener('click', removeGameStart);
-gamePageButton.addEventListener('click', removeGameRules);
-gamePageButton.addEventListener('click', instantiateDeckArray);
-gamePageButton.addEventListener('click', instantiateCardArray);
+mainContainer.addEventListener('click', handlerOne);
+mainContainer.addEventListener('click', handlerTwo);
 gameCards.addEventListener('click', flipCard);
 
 
 
-// function mainHandler() {
-//     missingInput();
-//     // removeGameStart();
-//     // removeGameRules()
-// }
+function handlerOne(event) {
+  event.preventDefault();
+  if (event.target.classList.contains('game-directions')) {
+    removeGameStart();
+    insertPlayerNames();
+  }
+}
+function handlerTwo(event) {
+  event.preventDefault();
+  if (event.target.classList.contains('play-game')) {
+    removeGameRules();
+    instantiateDeckArray();
+    instantiateCardArray();
+  }
+}
 
 function missingInput() {
   playerOne.value === "" &&
@@ -62,8 +69,8 @@ function removeGameRules() {
 };
 
 function flipCard(event) {
-  // document.querySelector('.back').classList.toggle('hidden');
-  // document.querySelector('.front').classList.toggle('hidden');
+  document.querySelector('.back').classList.toggle('hidden');
+  document.querySelector('.front').classList.toggle('hidden');
 };
 
 function instantiateDeckArray() {
