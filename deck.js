@@ -12,14 +12,8 @@ class Deck {
     // }
 
   }
-}
 
-//   checkSlectedCards() {
-//   // this.selectedCards += 10;
-//   // }
-//
-//   moveToMatched() {
-//
-//
-//   }
-// }
+  moveToMatched() {
+
+  }
+}

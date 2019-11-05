@@ -13,20 +13,14 @@ var gamePageName = document.querySelector('.p-1-game');
 var gamePage = document.querySelector('.game-page');
 var cards = null;
 var deck = null;
-var hasFlippedCard = false;
+var flippedCard = false;
 var firstCard, secondCard;
-// var  gameCards = document.querySelector('.card');
-// gameCards.addEventListener( 'click', function() {
-//   gameCards.classList.toggle('is-flipped');
-// });
 var gameCards = document.querySelectorAll('.card');
 
 input.addEventListener('click', missingInput);
 mainContainer.addEventListener('click', handlerOne);
 mainContainer.addEventListener('click', handlerTwo);
-// gamePage.addEventListener('click', flipTwoOnly);
 gameCards.forEach(card => card.addEventListener('click', flipCard));
-// gameCards.addEventListener('click', flipCard);
 
 
 
@@ -47,12 +41,12 @@ function handlerTwo(event) {
   }
 }
 
-function gameHandler(event) {
-  if(event.target.classList.contains('card')) {
-    console.log(event.target);
-    flipCard();
-  }
-}
+// function gameHandler(event) {
+//   if(event.target.classList.contains('card')) {
+//     console.log(event.target);
+//     flipCard();
+//   }
+// }
 
 function missingInput() {
   playerOne.value === "" &&
@@ -86,20 +80,22 @@ function removeGameRules() {
 function flipCard() {
   // this.classList.toggle('flip');
   this.classList.add('flip');
-  if (!hasFlippedCard) {
-     hasFlippedCard = true;
+  // deck.cards.push()
+  if (!flippedCard) {
+     flippedCard = true;
      firstCard = this;
      return;
+
     }
 
     secondCard = this;
-    hasFlippedCard = false;
+    flippedCard = false;
 
     checkForMatch();
   }
 
   function checkForMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    if (firstCard === secondCard) {
       disableCards();
       return;
     }
@@ -126,9 +122,11 @@ function instantiateDeckArray() {
 
 function instantiateCardArray() {
     var boardCards = document.querySelectorAll('.card');
+    var cardMatches = ['./red.jpeg', './blue.jpeg', './yellow.jpeg', './pink.jpeg', './black.jpeg', './red.jpeg', './blue.jpeg', './yellow.jpeg', './pink.jpeg', './black.jpeg'];
+
     console.log(deck);
-    for (var i = 0; i < boardCards.length; i++) {
-    var cards = new Card({cardId: boardCards[i].dataset.id, matchedInfo: "card" + [i]});
+    for (var i = 0; i < cardMatches.length; i++) {
+    var cards = new Card(cardMatches[i], "card" + [i]);
   deck.cards.push(cards);
   }
 };
