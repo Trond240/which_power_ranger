@@ -10,14 +10,18 @@ class Card {
 
 changeHasFlipped() {
   this.hasFlipped = !this.hasFlipped;
+  }
 }
 
 // checkMatched() {
-//   for(var i = 0; i < deck.cards.length; i ++)
-//   if (firstCard.dataset.id === secondCard.dataset.id) {
-//
+//   for (var i = 0; i < cards.length; i ++) {
+//   if (cardId.id === cardId.id) {
+//     console.log('it');
+//       }
+//     }
 //   }
 // }
+
 //
 // matched() {
 //     for(var i = 0; i < deck.cards.length; i ++) {
