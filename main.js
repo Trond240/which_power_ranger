@@ -13,6 +13,7 @@ var gamePageName = document.querySelector('.p-1-game');
 var gamePage = document.querySelector('.game-page');
 var gameBoard = document.querySelector('.box2');
 var winnerName = document.querySelector('.winner-name');
+var roundMatches = document.querySelector('.matched');
 var cards = null;
 var deck = null;
 var flippedCard = false;
@@ -62,7 +63,7 @@ function removeGameStart() {
 
 
 function insertPlayerNames() {
-  welcomePlayers.insertAdjacentHTML('afterbegin',
+  welcomePlayers.innerHTML =('afterbegin',
 `<h2 class='welcome'>WELCOME ${playerOne.value.toUpperCase()} AND ${playerTwo.value.toUpperCase()}!</h1>`);
 }
 
@@ -70,6 +71,13 @@ function insertNames() {
   gamePageName.insertAdjacentHTML('afterbegin',
 `<h3>${playerOne.value.toUpperCase()}</h3>`);
 }
+
+function insertMatches() {
+  roundMatches.innerHTML =
+`<h1>${deck.matched}</h1>`
+;
+}
+
 
 function insertWinner() {
   winnerName.insertAdjacentHTML('afterbegin',
@@ -83,6 +91,7 @@ function removeGameRules() {
 
 
 function flipCard(event) {
+  gameTime();
   this.classList.add('flip');
   if (!flippedCard) {
      flippedCard = true;
@@ -142,7 +151,7 @@ function instantiateCardArray() {
 };
 
 function dealCards() {
-  // deck.shuffle(deck.cards);
+  deck.shuffle(deck.cards);
   for(var i = 0; i < deck.cards.length; i++) {
     gameBoard.insertAdjacentHTML ('afterbegin',
         `<div class='card card-${i + 1}' id=${i + 1}>
@@ -156,14 +165,8 @@ function dealCards() {
       };
 
     function gameTime() {
+    console.log('mad-it');
     var stopTime = timerStop - timerStart;
     var timeSeconds = stopTime / 1000;
     cleanTime = timeSeconds.toFixed(1)
 }
-
-// function congrats() {
-//   if (deck.matched.length === 5) {
-//     document.querySelector('.game-page').classList.add('hidden');
-//     document.querySelector('.game-over').classList.remove('hidden');
-//   }
-// }

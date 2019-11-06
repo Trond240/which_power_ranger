@@ -14,6 +14,7 @@ class Deck {
       this.matchedCards.push(this.selectedCards[1]);
       this.matched++;
       hideCards();
+      insertMatches()
       congrats();
       this.selectedCards = [];
       return true;
