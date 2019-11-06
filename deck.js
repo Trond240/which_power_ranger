@@ -4,8 +4,36 @@ class Deck {
   this.matchedCards = [];
   this.matched = 0;
   this.selectedCards = [];
-  this.selected = false;
   }
+
+
+
+  checkMatched() {
+    console.log(this.selectedCards[0].image);
+    console.log(this.selectedCards[1].image);
+    if(this.selectedCards[0].image === this.selectedCards[1].image) {
+      console.log('made It');
+      this.matchedCards.push(this.selectedCards[0]);
+      this.matchedCards.push(this.selectedCards[1]);
+      console.log(this.matchedCards);
+      // this.matches++;
+      this.selectedCards = [];
+      return true;
+    } else {
+      this.selectedCards = [];
+      return false;
+    }
+    //
+    // resetCards() {
+    //   this.selectedCards = [];
+    //   this.matchedCards = [];
+    //   this.matches = 0;
+    //   for (var i = 0; i < this.cards.length; i ++) {
+    //     this.card[1].selected = false;
+    //   }
+    // }
+  }
+
 
   shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -17,11 +45,4 @@ class Deck {
     array[randomIndex] = temporaryValue;
     }
   }
-    selectCards(clickedCard) {
-    for (var i = 0; i < deck.cards.length; i++) {
-    if (this.cards[i].id === clickedCard) {
-      this.selectedCards.push(this.cards[i]);
-    }
-  }
-}
-}
+};

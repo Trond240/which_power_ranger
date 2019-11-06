@@ -77,24 +77,20 @@ function removeGameRules() {
 
 
 function flipCard(event) {
-  var clickedCard = parseInt(event.target.dataset.id);
   this.classList.add('flip');
   if (!flippedCard) {
      flippedCard = true;
      firstCard = this;
      deck.cards[firstCard.id - 1].changeHasFlipped();
-     deck.selectCards(clickedCard);
-     console.log(clickedCard)
+     deck.selectedCards.push(deck.cards[firstCard.id - 1]);
      return;
    } else {
      flippedCard = false;
      secondCard = this;
      deck.cards[secondCard.id - 1].changeHasFlipped();
-     deck.selectCards(clickedCard);
+     deck.selectedCards.push(deck.cards[secondCard.id - 1]);
    }
-   deck.selectCards(clickedCard);
-   console.log(clickedCard)
-   // checkMatched();
+   deck.checkMatched();
    unflipCards();
 };
 
