@@ -4,16 +4,24 @@ class Deck {
   this.matchedCards = [];
   this.matched = 0;
   this.seclectedCards = [];
+  this.selected = false;
   }
 
-  shuffle() {
-    // for (var i 0; i < this.cards.length; i++) {
-    //
-    // }
-
+  shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+    }
   }
-
-  moveToMatched() {
-
+    selectCards(clickedCard) {
+    for (var i = 0; i < this.cards.length; i++) {
+    if (this.cards[i].id === clickedCard) {
+      this.selectedCards.push(this.cards[i]);
+    }
   }
+}
 }
