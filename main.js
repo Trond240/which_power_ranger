@@ -12,6 +12,7 @@ var welcomePlayers = document.querySelector('.welcome-div');
 var gamePageName = document.querySelector('.p-1-game');
 var gamePage = document.querySelector('.game-page');
 var gameBoard = document.querySelector('.box2');
+var winnerName = document.querySelector('.winner-name');
 var cards = null;
 var deck = null;
 var flippedCard = false;
@@ -70,6 +71,11 @@ function insertNames() {
 `<h3>${playerOne.value.toUpperCase()}</h3>`);
 }
 
+function insertWinner() {
+  winnerName.insertAdjacentHTML('afterbegin',
+`<h2>CONGRATUALATIONs, ${playerOne.value.toUpperCase()} WINS!</h2>`);
+}
+
 function removeGameRules() {
   document.querySelector('.game-rules').classList.add('hidden');
   document.querySelector('.game-page').classList.remove('hidden');
@@ -115,6 +121,7 @@ function flipCard(event) {
     if (deck.matched === 5) {
       document.querySelector('.game-page').classList.add('hidden');
       document.querySelector('.game-over').classList.remove('hidden');
+      insertWinner();
     }
   }
 

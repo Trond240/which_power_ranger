@@ -9,8 +9,6 @@ class Deck {
 
 
   checkMatched() {
-    // console.log(this.selectedCards[0].image);
-    // console.log(this.selectedCards[1].image);
     if(this.selectedCards[0].image === this.selectedCards[1].image) {
       this.matchedCards.push(this.selectedCards[0]);
       this.matchedCards.push(this.selectedCards[1]);
@@ -23,15 +21,6 @@ class Deck {
       this.selectedCards = [];
       return false;
     }
-    //
-    // resetCards() {
-    //   this.selectedCards = [];
-    //   this.matchedCards = [];
-    //   this.matches = 0;
-    //   for (var i = 0; i < this.cards.length; i ++) {
-    //     this.card[1].selected = false;
-    //   }
-    // }
   }
 
 
