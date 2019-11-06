@@ -94,7 +94,7 @@ function flipCard(event) {
    }
    deck.selectCards(clickedCard);
    console.log(clickedCard)
-   checkMatched();
+   // checkMatched();
    unflipCards();
 };
 
