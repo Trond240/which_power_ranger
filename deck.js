@@ -7,25 +7,21 @@ class Deck {
   this.selected = false;
   }
 
-  checkMatch() {
-    // if selected 0 and selected 1 id's will equa to each other;
-    // push 0 and 1 into matched cards array
-    // incroment matches
-    // return selected cards into empoty array
+  shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+    }
   }
-
-  moveToMatched() {
-    this.matched ++;
+    selectCards(clickedCard) {
+    for (var i = 0; i < this.cards.length; i++) {
+    if (this.cards[i].id === clickedCard) {
+      this.selectedCards.push(this.cards[i]);
+    }
   }
-
-
-
-  shuffle() {
-
-
-  }
-
-  moveToMatched() {
-    this.matched ++;
-  }
+}
 }

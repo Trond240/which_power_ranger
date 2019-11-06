@@ -80,6 +80,7 @@ function removeGameRules() {
 
 
 function flipCard() {
+  var clickedCard = parseInt(event.target.parentNode.dataset.id);
   this.classList.add('flip');
   if (!flippedCard) {
      flippedCard = true;
@@ -93,29 +94,18 @@ function flipCard() {
      deck.cards[secondCard.id - 1].changeHasFlipped();
      // deck.selectedCards.push(deck.cards[secondCard.id - 1]);
    }
-   // deck.checkSelectedCards();
+   deck.selectCards(clickedCard);
+   console.log()
    unflipCards();
 };
 
-    // secondCard = this;
-    // flippedCard = false;
-
-  //   checkForMatch();
-  // }
-  //   unflipCards();
-  // }
-
-  // function disableCards() {
-  //   firstCard.removeEventListener('click', flipCard);
-  //   secondCard.removeEventListener('click', flipCard);
-  // }
   function unflipCards() {
     setTimeout(() => {
       firstCard.classList.remove('flip');
       secondCard.classList.remove('flip');
     }, 1500);
     deck.cards[firstCard.id - 1].changeHasFlipped();
-    deck.cards[secondCard.id -1].changeFlipped();
+    deck.cards[secondCard.id -1].changeHasFlipped();
   }
 
 function instantiateDeckArray() {
@@ -135,7 +125,7 @@ function instantiateCardArray() {
 };
 
 function dealCards() {
-
+  deck.shuffle(deck.cards);
   for(var i = 0; i < deck.cards.length; i++) {
     gameBoard.insertAdjacentHTML ('afterbegin',
         `<div class='card card-${i + 1}' id=${i + 1}>
