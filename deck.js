@@ -16,7 +16,8 @@ class Deck {
       this.matchedCards.push(this.selectedCards[0]);
       this.matchedCards.push(this.selectedCards[1]);
       console.log(this.matchedCards);
-      // this.matches++;
+      this.matched++;
+      console.log(this.matched);
       this.selectedCards = [];
       return true;
     } else {

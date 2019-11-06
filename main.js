@@ -89,10 +89,21 @@ function flipCard(event) {
      secondCard = this;
      deck.cards[secondCard.id - 1].changeHasFlipped();
      deck.selectedCards.push(deck.cards[secondCard.id - 1]);
+     checkForMatch();
    }
    deck.checkMatched();
    unflipCards();
 };
+
+  function checkForMatch() {
+    if (deck.selectedCards[0].image === deck.selectedCards[1].image) {
+      setTimeout(() => {
+      firstCard.classList.add('hidden');
+      secondCard.classList.add('hidden');
+      }, 1500);
+      console.log('matched');
+    }
+  }
 
   function unflipCards() {
     setTimeout(() => {

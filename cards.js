@@ -14,7 +14,7 @@ changeHasFlipped() {
 
 updateSelected() {
   this.selected = !this.selected;
-}
+  }
 }
 
 
