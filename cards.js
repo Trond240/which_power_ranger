@@ -3,24 +3,20 @@ class Card {
     this.cardId = cardId;
     this.image = image;
     this.matchedInfo = matchedInfo;
-    this.matched = false;
     this.hasFlipped = false;
+    this.selected = false;
 
   }
 
 changeHasFlipped() {
   this.hasFlipped = !this.hasFlipped;
   }
+
+updateSelected() {
+  this.selected = !this.selected;
+  }
 }
 
-// checkMatched() {
-//   for (var i = 0; i < cards.length; i ++) {
-//   if (cardId.id === cardId.id) {
-//     console.log('it');
-//       }
-//     }
-//   }
-// }
 
 //
 // matched() {

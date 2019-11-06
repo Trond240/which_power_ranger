@@ -277,8 +277,9 @@ h3, .wins {
 /* congrats page */
 
 .game-over {
+text-align: center;
 padding-top: 15%;
-color: white;
+color: black;
 font-weight: bold;
 }
 
