@@ -89,21 +89,17 @@ function flipCard(event) {
      secondCard = this;
      deck.cards[secondCard.id - 1].changeHasFlipped();
      deck.selectedCards.push(deck.cards[secondCard.id - 1]);
-     checkForMatch();
    }
    deck.checkMatched();
    unflipCards();
 };
 
-  function checkForMatch() {
-    if (deck.selectedCards[0].image === deck.selectedCards[1].image) {
+  function hideCards() {
       setTimeout(() => {
       firstCard.classList.add('hidden');
       secondCard.classList.add('hidden');
       }, 1500);
-      console.log('matched');
     }
-  }
 
   function unflipCards() {
     setTimeout(() => {
@@ -112,6 +108,14 @@ function flipCard(event) {
     }, 1500);
     deck.cards[firstCard.id - 1].changeHasFlipped();
     deck.cards[secondCard.id -1].changeHasFlipped();
+  }
+
+  function congrats() {
+    console.log('made it');
+    if (deck.matched === 5) {
+      document.querySelector('.game-page').classList.add('hidden');
+      document.querySelector('.game-over').classList.remove('hidden');
+    }
   }
 
 function instantiateDeckArray() {
@@ -131,7 +135,7 @@ function instantiateCardArray() {
 };
 
 function dealCards() {
-  deck.shuffle(deck.cards);
+  // deck.shuffle(deck.cards);
   for(var i = 0; i < deck.cards.length; i++) {
     gameBoard.insertAdjacentHTML ('afterbegin',
         `<div class='card card-${i + 1}' id=${i + 1}>
@@ -149,3 +153,10 @@ function dealCards() {
     var timeSeconds = stopTime / 1000;
     cleanTime = timeSeconds.toFixed(1)
 }
+
+// function congrats() {
+//   if (deck.matched.length === 5) {
+//     document.querySelector('.game-page').classList.add('hidden');
+//     document.querySelector('.game-over').classList.remove('hidden');
+//   }
+// }

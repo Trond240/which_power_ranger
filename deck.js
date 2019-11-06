@@ -9,15 +9,14 @@ class Deck {
 
 
   checkMatched() {
-    console.log(this.selectedCards[0].image);
-    console.log(this.selectedCards[1].image);
+    // console.log(this.selectedCards[0].image);
+    // console.log(this.selectedCards[1].image);
     if(this.selectedCards[0].image === this.selectedCards[1].image) {
-      console.log('made It');
       this.matchedCards.push(this.selectedCards[0]);
       this.matchedCards.push(this.selectedCards[1]);
-      console.log(this.matchedCards);
       this.matched++;
-      console.log(this.matched);
+      hideCards();
+      congrats();
       this.selectedCards = [];
       return true;
     } else {
