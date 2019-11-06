@@ -113,6 +113,7 @@ input {
   color: black;
   font-weight: 800;
   font-size: x-large;
+  background-color: rgba(255, 255, 255, .8);
 }
 
 
@@ -281,6 +282,7 @@ text-align: center;
 padding-top: 15%;
 color: black;
 font-size: xx-large;
+background-color: rgba(255, 255, 255, .8);
 }
 
 .new-game, .rematch {
