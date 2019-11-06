@@ -47,13 +47,6 @@ function handlerTwo(event) {
   }
 }
 
-// function gameHandler(event) {
-//   if(event.target.classList.contains('card')) {
-//     console.log(event.target);
-//     flipCard();
-//   }
-// }
-
 function missingInput() {
   playerOne.value === "" &&
   playerTwo.value === "";
@@ -84,16 +77,14 @@ function removeGameRules() {
 
 
 function flipCard(event) {
-  var clickedCard = event.target.dataset.id;
-  // if (deck.selectedCards.length === 2) {
-  //     return;
-  //   }
+  var clickedCard = parseInt(event.target.dataset.id);
   this.classList.add('flip');
   if (!flippedCard) {
      flippedCard = true;
      firstCard = this;
      deck.cards[firstCard.id - 1].changeHasFlipped();
      deck.selectCards(clickedCard);
+     console.log(clickedCard)
      return;
    } else {
      flippedCard = false;
@@ -103,6 +94,7 @@ function flipCard(event) {
    }
    deck.selectCards(clickedCard);
    console.log(clickedCard)
+   // checkMatched();
    unflipCards();
 };
 
