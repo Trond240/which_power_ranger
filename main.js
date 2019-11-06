@@ -17,6 +17,10 @@ var deck = null;
 var flippedCard = false;
 var firstCard, secondCard;
 var gameCards = document.querySelectorAll('.card');
+var timerStart = 0;
+var timerStop = 0;
+var cleanTime = 0;
+var click = 0;
 
 input.addEventListener('click', missingInput);
 mainContainer.addEventListener('click', handlerOne);
@@ -79,23 +83,26 @@ function removeGameRules() {
 };
 
 
-function flipCard() {
-  var clickedCard = parseInt(event.target.parentNode.dataset.id);
+function flipCard(event) {
+  var clickedCard = event.target.dataset.id;
+  // if (deck.selectedCards.length === 2) {
+  //     return;
+  //   }
   this.classList.add('flip');
   if (!flippedCard) {
      flippedCard = true;
      firstCard = this;
      deck.cards[firstCard.id - 1].changeHasFlipped();
-     // deck.selectedCards.push(deck.cards[firstCard.id - 1]);
+     deck.selectCards(clickedCard);
      return;
    } else {
      flippedCard = false;
      secondCard = this;
      deck.cards[secondCard.id - 1].changeHasFlipped();
-     // deck.selectedCards.push(deck.cards[secondCard.id - 1]);
+     deck.selectCards(clickedCard);
    }
    deck.selectCards(clickedCard);
-   console.log()
+   console.log(clickedCard)
    unflipCards();
 };
 
@@ -137,3 +144,9 @@ function dealCards() {
         var gameCards = document.querySelectorAll('.card');
         gameCards.forEach(card => card.addEventListener('click', flipCard));
       };
+
+    function gameTime() {
+    var stopTime = timerStop - timerStart;
+    var timeSeconds = stopTime / 1000;
+    cleanTime = timeSeconds.toFixed(1)
+}

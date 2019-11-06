@@ -1,5 +1,4 @@
 /* full page */
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -185,8 +184,6 @@ aside {
   }
 
 .box2 {
-  /* display:flex; */
-  /* justify-content: space-around; */
   padding-top: 2%;
   background-image: url('power.jpeg');
   background-position: center;
@@ -198,7 +195,6 @@ aside {
   "card1 card2 card3 ."
   "card4 card5 card6 card7"
   "card8 card9 card10 ."
-  /* position: relative; */
 };
 
 
@@ -211,8 +207,6 @@ aside {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr;
 }
-
-
 
 
 .box1, .box3 {
@@ -240,11 +234,6 @@ h3, .wins {
   padding-bottom: 50%;
 }
 
-/* .card.is-flipped {
-  transform: rotateY(180deg);
-} */
-
-
 .front, .back{
   margin-top: 10px;
   margin-left: 40%;
@@ -263,12 +252,9 @@ h3, .wins {
   backface-visibility: hidden;
 }
 
-
-
-
 .card {
-  /* width: calc(25% - 10px);
-  height: calc(33.333% - 10px); */
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
   transform-style: preserve-3d;
@@ -287,21 +273,8 @@ h3, .wins {
   transform: rotateY(180deg);
 }
 
-/* .back {
-  transform: rotateY( 180deg );
-  transition: transform 1s;
-  transform-style: preserve-3d;
-} */
 
-
-/* .card.is-flipped {
-  transform: rotateY(180deg);
-} */
-
-
-
-
-
+/* congrats page */
 
 .game-over {
 padding-top: 15%;

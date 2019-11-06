@@ -3,7 +3,7 @@ class Deck {
   this.cards = deck;
   this.matchedCards = [];
   this.matched = 0;
-  this.seclectedCards = [];
+  this.selectedCards = [];
   this.selected = false;
   }
 
@@ -18,7 +18,7 @@ class Deck {
     }
   }
     selectCards(clickedCard) {
-    for (var i = 0; i < this.cards.length; i++) {
+    for (var i = 0; i < deck.cards.length; i++) {
     if (this.cards[i].id === clickedCard) {
       this.selectedCards.push(this.cards[i]);
     }
